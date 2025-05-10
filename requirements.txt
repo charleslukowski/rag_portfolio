@@ -1,6 +1,7 @@
 streamlit
 torch
 pysqlite3-binary
+protobuf<=3.20.3  # Downgrade for opentelemetry/chromadb compatibility
 langchain
 langchain-community
 langchain-core
