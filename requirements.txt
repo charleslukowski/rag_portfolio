@@ -2,6 +2,7 @@ streamlit
 torch
 pysqlite3-binary
 protobuf<=3.20.3  # Downgrade for opentelemetry/chromadb compatibility
+numpy==1.26.4      # Pin NumPy to < 2.0 for chromadb 0.4.x compatibility
 langchain
 langchain-community
 langchain-core
