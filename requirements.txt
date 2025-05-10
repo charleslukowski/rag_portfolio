@@ -1,4 +1,6 @@
 streamlit
+# Attempt to guide pip to CPU-specific torch wheels, hoping for smaller footprint
+torch --find-links https://download.pytorch.org/whl/cpu/torch_stable.html
 langchain
 langchain-community
 langchain-core
