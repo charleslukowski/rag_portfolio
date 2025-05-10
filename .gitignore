@@ -45,15 +45,15 @@ env.bak/
 /data/raw_pdfs/
 /data/processed_text/
 /data/processed_chunks/
-/data/vector_store/
-/data/bm25_retriever/ # For pickled BM25 retriever
+# /data/vector_store/ # Temporarily un-ignoring for Vercel deployment with demo data
+# /data/bm25_retriever/ # Temporarily un-ignoring for Vercel deployment with demo data
 /data/raw_pdfs/manifest.json # The manifest contains local paths which might not be portable
 
 # Vector DB specific (example for ChromaDB default if in project root)
 # Adjust if your vector store is elsewhere or named differently
 # e.g. if it's inside data/vector_store/, then /data/vector_store/chroma/* might be more specific
-chroma/
-*.sqlite3 # if Chroma uses a local sqlite file directly
+chroma/ # This would be for a top-level chroma directory, not data/vector_store/chroma_db
+*.sqlite3 # if Chroma uses a local sqlite file directly (likely within data/vector_store/chroma_db if used)
 
 # Notebooks & temp files
 .ipynb_checkpoints
@@ -77,7 +77,6 @@ logs/
 
 # Other temporary files
 docs/_build/
-*.pkl
 
 # Project planning file
 plan.md 

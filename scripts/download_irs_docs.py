@@ -38,7 +38,9 @@ except requests.exceptions.RequestException as e:
 # Harvest every href that ends .pdf and passes the year filter
 candidates = re.findall(r'href="([^"+]+\.pdf)"', html, flags=re.I)
 pdfs       = [p.split('/')[-1] for p in candidates if YEAR_REGEX.search(p)]
-pdfs = pdfs[:5] # For testing, limit to first 5 PDFs
+
+# For testing, limit to first 5 PDFs
+#pdfs = pdfs[:5] # For testing, limit to first 5 PDFs
 
 if not pdfs:
     sys.exit(f"No PDFs matched year {YEAR}.  The naming convention may have changed.")
