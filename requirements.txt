@@ -1,0 +1,35 @@
+streamlit
+langchain
+langchain-community
+langchain-core
+langchain-chroma
+langchain-openai
+langchain-huggingface # For HuggingFaceEmbeddings
+sentence-transformers
+chromadb
+unstructured[doc,xlsx,pptx,pdf]
+PyMuPDF # For PDF text extraction
+pypdf # Already present, good for PDF manipulation
+rank_bm25
+python-dotenv
+fastapi # For API development as per plan
+uvicorn[standard] # ASGI server for FastAPI
+requests # For making HTTP requests (used in download script)
+beautifulsoup4 # For HTML parsing (often useful with requests)
+# python-docx # Covered by unstructured[docx]
+# openpyxl # Covered by unstructured[xlsx]
+# python-pptx # Covered by unstructured[pptx]
+# unstructured # Covered by unstructured[extras]
+PyYAML
+referencing
+wrapt
+grpcio
+cffi
+cryptography
+unstructured-inference
+pdf2image
+pandas
+onnxruntime
+matplotlib
+lxml
+pi-heif 

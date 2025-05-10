@@ -1,0 +1,82 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+# Usually these files are written by a PyInstaller basic bootloader
+# One-file builds
+*.spec
+# Exclude hidden PyInstaller directories
+.pyinstaller/
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env/
+ENV.bak/
+env.bak/
+
+# Data files - specific to this RAG project
+/data/raw_pdfs/
+/data/processed_text/
+/data/processed_chunks/
+/data/vector_store/
+/data/bm25_retriever/ # For pickled BM25 retriever
+/data/raw_pdfs/manifest.json # The manifest contains local paths which might not be portable
+
+# Vector DB specific (example for ChromaDB default if in project root)
+# Adjust if your vector store is elsewhere or named differently
+# e.g. if it's inside data/vector_store/, then /data/vector_store/chroma/* might be more specific
+chroma/
+*.sqlite3 # if Chroma uses a local sqlite file directly
+
+# Notebooks & temp files
+.ipynb_checkpoints
+
+# IDE settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.tmp
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+# Other temporary files
+docs/_build/
+
+# Project planning file
+plan.md 
