@@ -25,6 +25,7 @@ EXPOSE 8501
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:8501/_stcore/health || exit 1
 
-# The command to run the application will be taken from the Procfile by Vercel
-# or by a specific run command in vercel.json if we override.
-# No CMD needed here if Procfile is used by Vercel for Docker deployments. 
+# Command to run the application
+# Vercel will inject the $PORT environment variable.
+# Streamlit listens on 0.0.0.0 by default making it accessible.
+CMD ["streamlit", "run", "app.py", "--server.port=${PORT}", "--server.headless=true"] 
