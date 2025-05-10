@@ -1,12 +1,4 @@
 {
   "version": 2,
-  "name": "rag-portfolio-docker",
-  "builds": [
-    {
-      "src": "Dockerfile"
-    }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/" }
-  ]
+  "name": "rag-portfolio-docker"
 } 
