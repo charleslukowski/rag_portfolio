@@ -1,3 +1,13 @@
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+    print("Successfully monkeypatched sqlite3 with pysqlite3.")
+except ImportError:
+    print("pysqlite3 not found, using system sqlite3.")
+except KeyError:
+    print("pysqlite3 already aliased as sqlite3.")
+
 import streamlit as st
 # import chromadb # We'll use Langchain's Chroma wrapper
 # from chromadb.config import Settings # Not needed with Langchain's Chroma
