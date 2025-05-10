@@ -6,32 +6,33 @@ langchain-community
 langchain-core
 langchain-chroma
 langchain-openai
-langchain-huggingface # For HuggingFaceEmbeddings
+langchain-huggingface
 sentence-transformers
 chromadb
-unstructured[doc,xlsx,pptx,pdf]
-PyMuPDF # For PDF text extraction
-pypdf # Already present, good for PDF manipulation
 rank_bm25
 python-dotenv
-fastapi # For API development as per plan
-uvicorn[standard] # ASGI server for FastAPI
-requests # For making HTTP requests (used in download script)
-beautifulsoup4 # For HTML parsing (often useful with requests)
-# python-docx # Covered by unstructured[docx]
-# openpyxl # Covered by unstructured[xlsx]
-# python-pptx # Covered by unstructured[pptx]
-# unstructured # Covered by unstructured[extras]
+
+# Lower-level dependencies that are likely still needed by the above
+# or by Streamlit itself, or for type checking support that Langchain uses.
 PyYAML
 referencing
 wrapt
 grpcio
 cffi
 cryptography
-unstructured-inference
-pdf2image
-pandas
-onnxruntime
-matplotlib
-lxml
-pi-heif 
+
+# Explicitly removing packages identified as not directly used by app.py at runtime:
+# unstructured[doc,xlsx,pptx,pdf] # Removed
+# PyMuPDF # Removed
+# pypdf # Removed
+# fastapi # Removed
+# uvicorn[standard] # Removed
+# requests # Removed
+# beautifulsoup4 # Removed
+# unstructured-inference # Removed
+# pdf2image # Removed
+# pandas # Removed
+# onnxruntime # Removed as a test, add back if sentence-transformers or CrossEncoder specifically needs it and fails
+# matplotlib # Removed
+# lxml # Removed (likely a transitive dep of removed packages)
+# pi-heif # Removed 
