@@ -9,7 +9,9 @@ langchain-chroma
 langchain-openai
 langchain-huggingface
 sentence-transformers
-chromadb
+chromadb==0.4.24 # Pin chromadb version
+opentelemetry-api==1.22.0 # Pin opentelemetry for chromadb compatibility
+opentelemetry-sdk==1.22.0 # Pin opentelemetry for chromadb compatibility
 rank_bm25
 python-dotenv
 
