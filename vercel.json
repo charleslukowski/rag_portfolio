@@ -1,12 +1,3 @@
 {
   "version": 2
-  // Vercel should automatically detect and build the Dockerfile.
-  // The CMD in Dockerfile will be used.
-  // Routes might be needed if you have specific path handling,
-  // but for a single Streamlit app, Vercel's default routing for Docker
-  // usually maps / to the container's exposed port.
-  // We can add a simple route just in case:
-  // "routes": [
-  //   { "src": "/(.*)", "dest": "/" }
-  // ]
 } 
