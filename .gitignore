@@ -44,7 +44,7 @@ env.bak/
 # Data files - specific to this RAG project
 /data/raw_pdfs/
 /data/processed_text/
-/data/processed_chunks/
+# /data/processed_chunks/
 # /data/vector_store/ # Temporarily un-ignoring for Vercel deployment with demo data
 # /data/bm25_retriever/ # Temporarily un-ignoring for Vercel deployment with demo data
 /data/raw_pdfs/manifest.json # The manifest contains local paths which might not be portable
