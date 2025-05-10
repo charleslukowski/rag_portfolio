@@ -1,7 +1,5 @@
 streamlit
-# Attempt to guide pip to CPU-specific torch wheels, hoping for smaller footprint
-torch --find-links https://download.pytorch.org/whl/cpu/torch_stable.html
-# pysqlite3-binary should be listed before chromadb if possible, or ensure chromadb picks it up
+torch
 pysqlite3-binary
 langchain
 langchain-community
